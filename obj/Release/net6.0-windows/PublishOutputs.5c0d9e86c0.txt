@@ -1,0 +1,5 @@
+E:\Semestrul3\Project\Snake\bin\Release\net6.0-windows\app.publish\Snake.exe
+E:\Semestrul3\Project\Snake\bin\Release\net6.0-windows\app.publish\Snake.dll
+E:\Semestrul3\Project\Snake\bin\Release\net6.0-windows\app.publish\Snake.deps.json
+E:\Semestrul3\Project\Snake\bin\Release\net6.0-windows\app.publish\Snake.runtimeconfig.json
+E:\Semestrul3\Project\Snake\bin\Release\net6.0-windows\app.publish\Snake.pdb

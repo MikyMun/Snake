@@ -1,0 +1,86 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="Sanke" Height="500" Width="800"
+        MinHeight="300"
+        MinWidth="400"
+        
+        Background="{StaticResource BackGroundColor}"
+        Foreground="{StaticResource TextColor}"
+        FontFamily="{StaticResource MainFont}"
+        WindowStartupLocation="CenterScreen"
+        Icon="SnakeAssets/newIcon.ico"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        KeyDown="Window_KeyDown">
+    <Viewbox>
+        <Grid Width="761">
+            <Grid.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="SnakeAssets/image.png"
+                            AlignmentX="Left" AlignmentY="Center"/>
+                
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="ScoreText"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Score : 0"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Margin="622,92,0,0" Grid.Row="1"/>
+            <Border x:Name="GridBorder"
+                Grid.Row="1"
+                 
+                BorderBrush="{StaticResource BorderColor}"
+                BorderThickness="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                RenderOptions.EdgeMode="Aliased"
+                Margin="20">
+
+                <UniformGrid x:Name="GameGrid"
+                         Width="400"
+                         Height="400"
+                         Background="{StaticResource GridBackGroundColor}"
+                         SnapsToDevicePixels="True"
+                         RenderOptions.BitmapScalingMode="HighQuality">
+                </UniformGrid>
+            </Border>
+
+            <Border x:Name="Overlay"
+                    Grid.Row="1"
+                    Background="{StaticResource OverlayColor}"
+                    Height="{Binding Path=ActualHeight, ElementName=GridBorder}"
+                    Margin="171,0,171,0"
+                    RenderOptions.EdgeMode="Aliased" VerticalAlignment="Center">
+                <TextBlock x:Name="OverlayText"
+                           Text="Press Any Key To Start"
+                           FontSize="26"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           TextWrapping="Wrap">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="TextBlock.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="OverlayText" 
+                                        Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                        From="1.0" To="0.0" Duration="0:0:2" 
+                                        AutoReverse="True" RepeatBehavior="Forever" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+                </TextBlock>
+            </Border>
+        </Grid>
+    </Viewbox>
+</Window>

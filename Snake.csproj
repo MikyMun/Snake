@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <Resource Include="SnakeAssets\image.png" />
+    <Resource Include="SnakeAssets\snakeDeadTail.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SnakeAssets\Apple.png" />
+    <Resource Include="SnakeAssets\DroidSansMono.ttf" />
+    <Resource Include="SnakeAssets\newIcon.ico" />
+    <Resource Include="SnakeAssets\pngwing.png" />
+    <Resource Include="SnakeAssets\rama.png" />
+    <Resource Include="SnakeAssets\snakeBody.png" />
+    <Resource Include="SnakeAssets\snakeDeadBody.png" />
+    <Resource Include="SnakeAssets\snakeDeadHead.png" />
+    <Resource Include="SnakeAssets\SnakeDemo-lgEeD.otf" />
+    <Resource Include="SnakeAssets\snakeHead.png" />
+    <Resource Include="SnakeAssets\snakeTail.png" />
+    <Resource Include="SnakeAssets\strawberry.png" />
+    <Resource Include="SnakeAssets\Terasong.ttf" />
+    <Resource Include="SnakeAssets\texture.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net6.0-windows\" />
+  </ItemGroup>
+
+</Project>
