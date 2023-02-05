@@ -1,20 +1,20 @@
 ﻿Snake
-
+1.0.0.0
 
 winexe
 C#
 .cs
-E:\Semestrul3\Project\Snake\obj\Debug\net6.0-windows\
+e:\CourseCode\Snake\obj\Debug\net6.0-windows\
 Snake
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-E:\Semestrul3\Project\Snake\App.xaml
+e:\CourseCode\Snake\App.xaml
 11407045341
 
-101354957761
+12-330755250
 194-1797456590
 MainWindow.xaml;
 
-False
+True
 
